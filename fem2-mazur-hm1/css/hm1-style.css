@@ -20,7 +20,7 @@ body{
     padding-right: 70px;
 }
 .top-img{
-    background-image: url("../pics/top-img@1X.png");
+    background-image: url("../pics/top-img.png");
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -32,7 +32,7 @@ body{
     padding-top: 60px;
     font-family: monospace;
     text-align: center;
-    background-image: url("../pics/contetn-background@1X.png");
+    background-image: url("../pics/contetn-background.png");
 }
 .main-block-title{
     text-transform: uppercase;
