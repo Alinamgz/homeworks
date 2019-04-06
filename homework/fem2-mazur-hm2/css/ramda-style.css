@@ -38,19 +38,21 @@
 }
 .lb-menubar-itm{
     font-size: 30px;
+    padding: 5px;
 }
-.lb-menubar-itm-link{
-    display: block;
-    padding: 30px 0;
-    padding-left: 45px;
-    color: #50606b;
-    text-decoration: none;
-}
-.lb-menubar-itm-link-selected{
-    padding-left: 70px;
+.lb-menubar-itm-selected{
+    /*padding-left: 60px;*/
     color: #333333;
     background-color: #dbdbdb;
 }
+.lb-menubar-itm-link{
+    display: block;
+    padding: 25px 0;
+    padding-left: 40px;
+    color: #50606b;
+    text-decoration: none;
+}
+
 
 
 .container{
