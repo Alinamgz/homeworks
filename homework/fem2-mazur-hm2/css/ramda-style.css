@@ -1,4 +1,5 @@
-
+/* Logo */
+/* hb=head-block */
 .hb-logo-link{
     text-decoration: none;
 }
@@ -11,6 +12,8 @@
     color:#4bcaff;
 }
 
+/* Navigation */
+/* hb=head-block*/
 .hb-navbar{
     margin: 45px 0 55px;
     text-align: center;
@@ -29,10 +32,13 @@
     border-right: 1px solid #818181;
 }
 
+/* Menu */
+/* lb = left-block */
 .left-block-menubar{
     display: inline-block;
     box-sizing: border-box;
     width: 345px;
+    float:left;
     border: 1px solid black;
     list-style: none;
 }
@@ -53,11 +59,31 @@
     text-decoration: none;
 }
 
-
+/*Main subject*/
+.main-subject{
+    display: inline-block;
+    width: 885px;
+    margin: 0 0 70px 50px;
+}
+.main-subject-img{
+    padding: 75px 280px;
+    margin-bottom:50px;
+    border: 1px solid #333333;
+}
+.main-subject-txt{
+    margin: 30px 35px;
+    font-size: 18px;
+    line-height: 1.5;
+}
 
 .container{
     width: 1280px;
     box-sizing: border-box;
     margin: 0 auto;
     font-family: sans-serif;
+}
+.clearfix::after{
+    content:'';
+    display:block;
+    clear: both;
 }
