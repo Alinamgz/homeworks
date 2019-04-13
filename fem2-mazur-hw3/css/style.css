@@ -1,0 +1,148 @@
+.basic-txt{
+    font-family: Verdana, Courier,sans-serif ;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Logo */
+/* tb = top-block */
+.top-block{
+    padding-top: 50px;
+}
+.tb-logo{
+    float:left;
+}
+.tb-logo-link{
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.tb-logo-link::before{
+    content: url("../img/logo.png");
+    display: inline-block;
+    margin-right: 15px;
+}
+.tb-logo-milan{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 29px;
+}
+.tb-logo-holidays{
+    display: inline-block;
+    position: relative;
+    left: -108px;
+}
+
+/* Contacts */
+/* tb = top-block*/
+.tb-contacts{
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Main-block*/
+/* mb = middle-block*/
+.middle-block{
+    /*margin-top: 48px;*/
+    font-family: Courier, Verdana, sans-serif;
+}
+.mb-itm{
+    /*box-sizing: border-box;*/
+    display: inline-block;
+    width: 30%;
+    height: 200px;
+    float: left;
+    margin: 48px 0;
+    text-decoration: none;
+}
+.mb-itm:nth-of-type(3n-1){
+    margin-left: 67px;
+    margin-right: 67px;
+}
+/* Orange block hiden*/
+.mb-itm-orange{
+    display: inline-block;
+    width: 277px;
+    margin-top: 42%;
+    padding: 35px 15px 17px;
+    background-color: transparent;
+    color: transparent;
+}
+.price{
+    position: relative;
+    font-size: 20px;
+}
+.price::before{
+    content: '\20AC';
+    /*font-size: 20px;*/
+}
+.price::after{
+    content: 'From';
+    position: absolute;
+    top:-12px;
+    left:0;
+    font-size: 10px;
+}
+.details{
+    margin-left: 40%;
+    font-size: 14px;
+
+}
+.details::after{
+    content: '\203A';
+}
+.mb-itm-name{
+    padding-top: 22px;
+    text-align: center;
+}
+
+
+/* sprites for main block*/
+.bg-shopping{
+    width: 307px;
+    height: 200px;
+    background: url('../img/css-sprites.png') -15px -15px;
+}
+.bg-sightseeing{
+    width: 308px; height: 200px;
+    background: url('../img/css-sprites.png') -15px -245px;
+}
+.bg-food{
+    width: 307px; height: 200px;
+    background: url('../img/css-sprites.png') -15px -475px;
+}
+.bg-bars{
+    width: 307px; height: 200px;
+    background: url('../img/css-sprites.png') -15px -705px;
+}
+.bg-architecture{
+    width: 308px; height: 201px;
+    background: url('../img/css-sprites.png') -15px -935px;
+}
+.bg-walking{
+    width: 307px; height: 201px;
+    background: url('../img/css-sprites.png') -15px -1166px;
+}
+
+
+
+/* container */
+.container{
+    box-sizing: border-box;
+    width: 1059px;
+    margin: 0 auto;
+}
+/* clearfix */
+.clearfix::after{
+    content:'';
+    display:block;
+    clear: both;
+}
+.background{
+    background: linear-gradient( rgba(3,3,3,.73), rgba(3,3,3,.74)), url('../img/background.png') no-repeat;
+    background-size: cover;
+}
+/*.overlay{*/
+/*    background-color: rgba(0,0,0, .73);*/
+/*}*/

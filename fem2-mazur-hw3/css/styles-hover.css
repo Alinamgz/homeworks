@@ -1,0 +1,16 @@
+/* Logo Hover */
+.tb-logo-link:hover{
+    color: #f26522;
+}
+.tb-logo-link:hover::before{
+    content: url("../img/logo-hover.png");
+}
+
+/* Main-block Hover */
+.mb-itm:hover > .mb-itm-orange{
+    background-color: #f26522;
+    color: #ffffff;
+}
+.mb-itm:hover > .mb-itm-name{
+    color: #f26522;
+}
