@@ -1,13 +1,7 @@
-.basic-txt{
-    font-family: Verdana, Courier,sans-serif ;
-    font-size: 18px;
-    color: #ffffff;
-}
-
 /* Logo */
 /* tb = top-block */
 .top-block{
-    padding-top: 50px;
+    padding-top: 46px;
 }
 .tb-logo{
     float:left;
@@ -15,8 +9,11 @@
 .tb-logo-link{
     display: block;
     text-decoration: none;
-    font-weight: 700;
     text-transform: uppercase;
+    font-family: Verdana, Courier,sans-serif ;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
 }
 .tb-logo-link::before{
     content: url("../img/logo.png");
@@ -39,21 +36,22 @@
 .tb-contacts{
     margin-top: 10px;
     text-align: right;
+    font-family: Verdana, Courier,sans-serif ;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 /* Main-block*/
-/* mb = middle-block*/
-.middle-block{
-    /*margin-top: 48px;*/
+/* mb = main-block*/
+.main-block{
     font-family: Courier, Verdana, sans-serif;
 }
 .mb-itm{
-    /*box-sizing: border-box;*/
     display: inline-block;
     width: 30%;
     height: 200px;
     float: left;
-    margin: 48px 0;
+    margin: 46px 0 90px;
     text-decoration: none;
 }
 .mb-itm:nth-of-type(3n-1){
@@ -75,7 +73,6 @@
 }
 .price::before{
     content: '\20AC';
-    /*font-size: 20px;*/
 }
 .price::after{
     content: 'From';
@@ -87,18 +84,12 @@
 .details{
     margin-left: 40%;
     font-size: 14px;
-
 }
 .details::after{
     content: '\203A';
 }
-.mb-itm-name{
-    padding-top: 22px;
-    text-align: center;
-}
 
-
-/* sprites for main block*/
+/* Sprites for main block*/
 .bg-shopping{
     width: 307px;
     height: 200px;
@@ -125,7 +116,30 @@
     background: url('../img/css-sprites.png') -15px -1166px;
 }
 
+/* Main-block item name*/
+.mb-itm-name{
+    padding-top: 22px;
+    text-align: center;
+    font-family: Verdana, Courier,sans-serif ;
+    font-size: 18px;
+    color: #ffffff;
+}
 
+/* Footer */
+/* bb = bottom-block */
+.bottom-block{
+    padding-bottom: 20px;
+}
+.bb-copyright{
+    /*margin-bottom: 20px;*/
+    font-family: Courier, Verdana,sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+}
+.bb-copyright::before{
+    content: '\00A9';
+}
 
 /* container */
 .container{
@@ -139,10 +153,8 @@
     display:block;
     clear: both;
 }
+/* background */
 .background{
     background: linear-gradient( rgba(3,3,3,.73), rgba(3,3,3,.74)), url('../img/background.png') no-repeat;
     background-size: cover;
 }
-/*.overlay{*/
-/*    background-color: rgba(0,0,0, .73);*/
-/*}*/
