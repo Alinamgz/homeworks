@@ -52,6 +52,7 @@
     height: 200px;
     float: left;
     margin: 46px 0 90px;
+    background: url('../img/css-sprites.png');
     text-decoration: none;
 }
 .mb-itm:nth-of-type(3n-1){
@@ -93,27 +94,27 @@
 .bg-shopping{
     width: 307px;
     height: 200px;
-    background: url('../img/css-sprites.png') -15px -15px;
+    background-position: -15px -15px;
 }
 .bg-sightseeing{
-    width: 308px; height: 200px;
-    background: url('../img/css-sprites.png') -15px -245px;
+    width: 307px; height: 200px;
+    background-position: -15px -245px;
 }
 .bg-food{
     width: 307px; height: 200px;
-    background: url('../img/css-sprites.png') -15px -475px;
+    background-position: -15px -475px;
 }
 .bg-bars{
     width: 307px; height: 200px;
-    background: url('../img/css-sprites.png') -15px -705px;
+    background-position: -15px -705px;
 }
 .bg-architecture{
-    width: 308px; height: 201px;
-    background: url('../img/css-sprites.png') -15px -935px;
+    width: 307px; height: 200px;
+    background-position: -15px -935px;
 }
 .bg-walking{
-    width: 307px; height: 201px;
-    background: url('../img/css-sprites.png') -15px -1166px;
+    width: 307px; height: 200px;
+    background-position: -15px -1166px;
 }
 
 /* Main-block item name*/
