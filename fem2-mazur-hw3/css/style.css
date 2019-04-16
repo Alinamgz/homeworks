@@ -46,19 +46,20 @@
 .main-block{
     font-family: Courier, Verdana, sans-serif;
 }
-.mb-itm{
+.for-margin{
     display: inline-block;
-    width: 30%;
-    height: 200px;
-    float: left;
     margin: 46px 0 90px;
-    background: url('../img/css-sprites.png');
-    text-decoration: none;
 }
-.mb-itm:nth-of-type(3n-1){
+.for-margin:nth-of-type(3n-1){
     margin-left: 67px;
     margin-right: 67px;
 }
+.mb-itm{
+    float: left;
+    background: url('../img/css-sprites.png');
+    text-decoration: none;
+}
+
 /* Orange block hiden*/
 .mb-itm-orange{
     display: inline-block;
@@ -145,7 +146,7 @@
 /* container */
 .container{
     box-sizing: border-box;
-    width: 1059px;
+    width: 1056px;
     margin: 0 auto;
 }
 /* clearfix */
