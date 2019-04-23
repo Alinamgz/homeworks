@@ -8,7 +8,7 @@
 /* tbn = top-block-navbar */
 .top-block{
     padding: 20px 0;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0,0,0,.5);
 }
 
 /* Logo */
@@ -67,22 +67,60 @@
     background-position: -128px -10px;
 }
 
-/* Welcome and Authorisation */
-.tbn-authorisation{
+/* Welcome  */
+.tbn-welcome{
     display: inline-block;
     margin-left: 25px;
     font-family: Verdana, Courier, sans-serif;
     font-size: 14px;
     color: #ffffff;
 }
-.tbn-authorisation-link{
+.tbn-welcome-link{
     text-decoration: none;
     color: #3cb878;
 }
-.tbn-authorisation-link:hover{
+.tbn-welcome-link:hover{
     text-decoration: underline;
 }
 
+
+/* Authorisation field */
+.authorisation{
+    position:relative;
+    width: 30%;
+    margin: 65px 35%;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.authorisation-header{
+    padding: 30px 0 15px;
+}
+.authorisation-title{
+    display: inline-block;
+    margin-left: 60px;
+    font-family: Verdana, Courier,sans-serif;
+    font-size: 20px;
+}
+.authorisation-title::before{
+    position: absolute;
+    top: 22px;
+    left:0;
+    content: ' 	\0025A0 ';
+    font-size: 30px;
+    color:#3cb878;
+}
+.authorisation-link{
+    display: inline-block;
+    float: right;
+    margin-right: 60px;
+    text-decoration: none;
+    font-family: Verdana, Courier, sans-serif;
+    font-size: 14px;
+    color: #a4dec0;
+}
+.authorisation-link:hover{
+    text-decoration: underline;
+}
 
 /*Спрайты для кнопок*/
 .sprite-facebook {
@@ -96,6 +134,8 @@
     height: 16px;
     background-position: -294px -10px;
 }
+
+
 
 .clearfix:after{
     content: '';
