@@ -5,13 +5,14 @@
 
 /* Header */
 /* tb = top-block */
+/* tbn = top-block-navbar */
 .top-block{
     padding: 20px 0;
     background-color: rgba(0,0,0,.4);
 }
 
 /* Logo */
-.tb-navbar-logo{
+.tbn-logo{
     margin-left: 80px;
     text-decoration: none;
     font-family: Verdana, Courier, sans-serif;
@@ -20,16 +21,22 @@
     font-weight: 700;
     color: #ffffff;
 }
-.tb-navbar-logo:hover{
+.tbn-logo:hover{
     color: #3cb878;
 }
 
+/* Right part */
+.tbn-right-part{
+    float:right;
+    margin-right: 75px;
+}
 /* Icons */
-.tb-navbar-icon-menu{
+.tbn-icon-menu{
     display: inline-block;
+    margin-left: auto;
     border-right: 1px solid rgba(255, 255, 255, .5);
 }
-.tb-navbar-icon{
+.tbn-icon{
     display: inline-block;
     margin-right: 25px;
     height: 20px;
@@ -61,17 +68,18 @@
 }
 
 /* Welcome and Authorisation */
-.tb-navbar-authorisation{
+.tbn-authorisation{
     display: inline-block;
+    margin-left: 25px;
     font-family: Verdana, Courier, sans-serif;
     font-size: 14px;
     color: #ffffff;
 }
-.tb-navbar-authorisation-link{
+.tbn-authorisation-link{
     text-decoration: none;
     color: #3cb878;
 }
-.tb-navbar-authorisation-link:hover{
+.tbn-authorisation-link:hover{
     text-decoration: underline;
 }
 
@@ -87,4 +95,10 @@
     width: 25px;
     height: 16px;
     background-position: -294px -10px;
+}
+
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
 }
