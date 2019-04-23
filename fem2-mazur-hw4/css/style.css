@@ -1,0 +1,90 @@
+.background {
+    background: #3a3d38 url("../img/background-rana-sawalha.png") no-repeat;
+    background-size: cover;
+}
+
+/* Header */
+/* tb = top-block */
+.top-block{
+    padding: 20px 0;
+    background-color: rgba(0,0,0,.4);
+}
+
+/* Logo */
+.tb-navbar-logo{
+    margin-left: 80px;
+    text-decoration: none;
+    font-family: Verdana, Courier, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.tb-navbar-logo:hover{
+    color: #3cb878;
+}
+
+/* Icons */
+.tb-navbar-icon-menu{
+    display: inline-block;
+    border-right: 1px solid rgba(255, 255, 255, .5);
+}
+.tb-navbar-icon{
+    display: inline-block;
+    margin-right: 25px;
+    height: 20px;
+    width: 20px;
+    background: url("../img/css_sprites.png") no-repeat;
+}
+/* calendar */
+.bg-calendar{
+    background-position: -10px -10px;
+}
+.bg-calendar:hover{
+    background-position: -49px -10px;
+}
+/* forum */
+.bg-forum{
+    width: 28px;
+    background-position: -168px -10px;
+}
+.bg-forum:hover{
+    width: 28px;
+    background-position: -216px -10px;
+}
+/* compass */
+.bg-compass{
+    background-position: -88px -10px;
+}
+.bg-compass:hover{
+    background-position: -128px -10px;
+}
+
+/* Welcome and Authorisation */
+.tb-navbar-authorisation{
+    display: inline-block;
+    font-family: Verdana, Courier, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+.tb-navbar-authorisation-link{
+    text-decoration: none;
+    color: #3cb878;
+}
+.tb-navbar-authorisation-link:hover{
+    text-decoration: underline;
+}
+
+
+/*Спрайты для кнопок*/
+.sprite-facebook {
+    width: 10px;
+    height: 20px;
+    background-position: -264px -10px;
+}
+
+.sprite-google {
+    width: 25px;
+    height: 16px;
+    background-position: -294px -10px;
+}
