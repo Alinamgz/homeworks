@@ -88,7 +88,7 @@
 .authorisation{
     position:relative;
     width: 30%;
-    margin: 65px 35%;
+    margin: 5% 35%;
     border-radius: 10px;
     background-color: #ffffff;
 }
@@ -122,20 +122,61 @@
     text-decoration: underline;
 }
 
-/*Спрайты для кнопок*/
-.sprite-facebook {
-    width: 10px;
-    height: 20px;
-    background-position: -264px -10px;
+.authorisation-btn{
+    position: relative;
+    width: 157px;
+    padding: 0;
+    font-family: Verdana, Courier, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.authorisation-btn-name{
+    position: relative;
+    left: 25px;
+    display: inline-block;
+    width: 109px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
-.sprite-google {
-    width: 25px;
-    height: 16px;
-    background-position: -294px -10px;
+.facebook-btn{
+    background-color: #305db8;
+}
+.facebook-btn:hover{
+    background-color: #264b96;
+}
+.facebook-btn::before{
+    position: absolute;
+    left: 0;
+    top: 15px;
+    display: inline-block;
+    height: 28px;
+    width: 47px;
+    content: url("../img/facebook.png");
+    border-right: 1px solid rgba(0, 0,0, .25);
+
 }
 
-
+.google-btn{
+    background-color:#df4a32;
+}
+.google-btn:hover{
+    background-color:#c3412c;
+}
+.google-btn::before{
+    position: absolute;
+    left: 0;
+    top: 15px;
+    display: inline-block;
+    height: 28px;
+    width: 47px;
+    content: url("../img/google.png ");
+    border-right: 1px solid rgba(0, 0,0, .25);
+}
 
 .clearfix:after{
     content: '';
