@@ -85,19 +85,22 @@
 
 
 /* Authorisation field */
-.authorisation{
+.authorisation-wraper{
     position:relative;
+    box-sizing: border-box;
+    padding: 30px 60px;
     width: 30%;
     margin: 5% 35%;
     border-radius: 10px;
     background-color: #ffffff;
 }
+
+/* Authorisation header */
 .authorisation-header{
-    padding: 30px 0 15px;
+    margin-bottom: 15px;
 }
 .authorisation-title{
     display: inline-block;
-    margin-left: 60px;
     font-family: Verdana, Courier,sans-serif;
     font-size: 20px;
 }
@@ -112,7 +115,6 @@
 .authorisation-link{
     display: inline-block;
     float: right;
-    margin-right: 60px;
     text-decoration: none;
     font-family: Verdana, Courier, sans-serif;
     font-size: 14px;
@@ -122,7 +124,14 @@
     text-decoration: underline;
 }
 
-.authorisation-btn{
+/* Social-media authorisation buttons */
+/*.authorisation-social-btn-container{*/
+/*    margin: 0 60px;*/
+/*}*/
+.authorisation-social-btn-container{
+    margin-bottom: 30px;
+}
+.authorisation-social-btn{
     position: relative;
     width: 157px;
     padding: 0;
@@ -133,17 +142,19 @@
     border-radius: 3px;
     cursor: pointer;
 }
-.authorisation-btn-name{
+.authorisation-social-btn-name{
     position: relative;
     left: 25px;
     display: inline-block;
     width: 109px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-align: center;
+    border-left: 1px solid rgba(0, 0,0, .25);
 }
-
+/* Facebook */
 .facebook-btn{
+    float:left;
     background-color: #305db8;
 }
 .facebook-btn:hover{
@@ -157,11 +168,12 @@
     height: 28px;
     width: 47px;
     content: url("../img/facebook.png");
-    border-right: 1px solid rgba(0, 0,0, .25);
-
+    /*border-right: 1px solid rgba(0, 0,0, .25);*/
 }
 
+/* Google */
 .google-btn{
+    float: right;
     background-color:#df4a32;
 }
 .google-btn:hover{
@@ -170,12 +182,51 @@
 .google-btn::before{
     position: absolute;
     left: 0;
-    top: 15px;
+    top: 16px;
     display: inline-block;
     height: 28px;
     width: 47px;
     content: url("../img/google.png ");
-    border-right: 1px solid rgba(0, 0,0, .25);
+}
+
+.authorisation-spacer{
+    margin-bottom: 18px;
+}
+.authorisation-spacer-or{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #aeaeae;
+}
+.authorisation-spacer-or::before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: inline-block;
+    width: 135px;
+    border-top: 1px solid;
+}
+.authorisation-spacer-or::after{
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 0;
+    display: inline-block;
+    width: 135px;
+    border-top: 1px solid;
+}
+
+.authorisation-form-inputs{
+    box-sizing: border-box;
+    padding: 18px;
+    width: 100%;
+    border: 1px solid #aeaeae;
+    border-radius: 3px;
+}
+.authorisation-form-inputs:focus{
+    /*color: #000000;*/
 }
 
 .clearfix:after{
