@@ -6,7 +6,7 @@ for (let result = 0; result <= numba; result++){
         break;
     } else if (result % 5 === 0){
         console.log(result);
-    } else {
-        continue;
+    // } else {
+    //     continue;
     }
 }

@@ -8,6 +8,7 @@
 
 /* Main-block Hover */
 .mb-itm:hover > .mb-itm-orange{
+    /*display: inline-block;*/
     background-color: #f26522;
     color: #ffffff;
 }
