@@ -37,11 +37,11 @@
     <!--        Social media authorisation buttons-->
             <div class="authorisation-social-btn-container clearfix">
     <!--            Facebook -->
-                <button type="button" class="authorisation-social-btn facebook-btn"><!--
+                <button type="button" class="authorisation-form-btn authorisation-social-btn facebook-btn"><!--
                     --><span class="authorisation-social-btn-name"> Facebook </span>
                  </button>
     <!--            Google -->
-                <button type="button" class="authorisation-social-btn google-btn"><!--
+                <button type="button" class="authorisation-form-btn authorisation-social-btn google-btn"><!--
                     --><span class="authorisation-social-btn-name"> Google </span>
                 </button>
             </div>
@@ -51,10 +51,18 @@
             </div>
     <!--        Form -->
             <form action="" class="authorisation-form">
-                <label>
-                    <input class="authorisation-form-inputs" type="text" placeholder="Name">
-                </label>
-
+                <input class="authorisation-form-inputs" type="text" placeholder="Name">
+                <input class="authorisation-form-inputs" type="text" placeholder="Last Name">
+                <input class="authorisation-form-inputs" type="email" placeholder="Email">
+                <input class="authorisation-form-inputs" type="password" placeholder="Choose Password">
+                <input class="authorisation-form-inputs" type="password" placeholder="Confirm Password">
+<!--                Terms and conditions agreement-->
+                <div class="agreement">
+                    <input type="checkbox">
+                    <span class="agreement-txt"> Agree our <a href="#" class="agreement-link">Terms & Conditions</a> </span>
+                </div>
+<!--                Confirm btn-->
+                <input type="submit" value="Create Account" class="confirm-btn authorisation-form-btn">
             </form>
     </section>
 </section>

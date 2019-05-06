@@ -1,4 +1,7 @@
+
+/* Background */
 .background {
+    padding-bottom: 1px;
     background: #3a3d38 url("../img/background-rana-sawalha.png") no-repeat;
     background-size: cover;
 }
@@ -103,6 +106,7 @@
     display: inline-block;
     font-family: Verdana, Courier,sans-serif;
     font-size: 20px;
+    color: #434343;
 }
 .authorisation-title::before{
     position: absolute;
@@ -125,22 +129,22 @@
 }
 
 /* Social-media authorisation buttons */
-/*.authorisation-social-btn-container{*/
-/*    margin: 0 60px;*/
-/*}*/
+
 .authorisation-social-btn-container{
     margin-bottom: 30px;
 }
-.authorisation-social-btn{
-    position: relative;
-    width: 157px;
-    padding: 0;
+.authorisation-form-btn{
     font-family: Verdana, Courier, sans-serif;
     font-size: 16px;
     color: #ffffff;
     border: 1px solid transparent;
     border-radius: 3px;
     cursor: pointer;
+}
+.authorisation-social-btn{
+    position: relative;
+    width: 157px;
+    padding: 0;
 }
 .authorisation-social-btn-name{
     position: relative;
@@ -170,7 +174,6 @@
     content: url("../img/facebook.png");
     /*border-right: 1px solid rgba(0, 0,0, .25);*/
 }
-
 /* Google */
 .google-btn{
     float: right;
@@ -188,7 +191,7 @@
     width: 47px;
     content: url("../img/google.png ");
 }
-
+/* Autorisation spacer */
 .authorisation-spacer{
     margin-bottom: 18px;
 }
@@ -218,17 +221,51 @@
     border-top: 1px solid;
 }
 
+/* Authorisation form inputs */
 .authorisation-form-inputs{
     box-sizing: border-box;
     padding: 18px;
+    margin-bottom: 9px;
     width: 100%;
     border: 1px solid #aeaeae;
     border-radius: 3px;
 }
 .authorisation-form-inputs:focus{
-    /*color: #000000;*/
+    margin-bottom: 17px;
+    color: #434343;
+    box-shadow: 0 5px 8px #d6d6d6;
 }
 
+/* Terms and conditions agreement */
+.agreement{
+    margin-top: 22px;
+    margin-bottom: 28px;
+}
+.agreement-txt{
+    font-family: Verdana, Courier, sans-serif;
+    font-size: 14px;
+    color: #434343;
+}
+.agreement-link{
+    text-decoration: none;
+    color: #3cb878;
+}
+.agreement-link:hover{
+    text-decoration: underline;
+}
+
+/* Confirm */
+.confirm-btn{
+    width: 100%;
+    height: 46px;
+    margin-bottom: 32px;
+    background-color: #3cb878;
+}
+.confirm-btn:hover{
+    background-color: #329a65;
+}
+
+/* Clearfix */
 .clearfix:after{
     content: '';
     display: block;
