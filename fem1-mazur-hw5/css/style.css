@@ -1,57 +1,129 @@
+.background{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #3a4965;
+}
+/*!* Tble basics*!*/
+
 .table{
-    border: solid 1px gray;
-
+    align-self: center;
 }
-.table-row{
-    border: solid 1px gray;
-}
-
+/*.table-row{*/
+/*}*/
 .table-column{
-    padding: 30px 0;
+/*    !*padding: 30px 0;*!*/
+    width: 277px;
+    height: 70px;
+    border-left: 2px solid rgba(100, 100, 100, .35);
     font-family: Arimo, sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     text-align: center;
-    border: solid 1px gray;
-    width: 277px;
+    vertical-align: center;
+    color: #484848;
 }
+
 .first-column{
     width: 310px;
+    border-left: none;
 }
 
-.table-button{
-    padding: 18px 0;
-    width: 192px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    cursor: pointer;
+/*!* Table Header *!*/
+
+.head-row{
+    background-color: #fafafa;
+    font-weight: 700;
+}
+.tariff{
+    font-size: 24px;
+    color: white;
+}
+.tariff:hover{
+    font-size: 30px;
 }
 
-/* For colouring */
+.price{
+    text-align: right;
+    font-size: 60px;
+}
+.price::before{
+    content: "\0024";
+}
+.price::after{
+    content: "Per Month";
+    position: relative;
+    right: 35px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.price-coins{
+    font-size: 24px;
+}
+
+
+/* Table Body*/
 .odd-row{
     background-color: #f2f2f2;
 }
-
 .even-row{
     background-color: #e3e3e3;
 }
 
+.offer-icon{
+    margin-right: 10px;
+    font-size: 24px;
+    color: #848484;
+}
+
+
+/* Table Footer */
+/* fc = first-column */
+/* tb - table-body */
+
+.footer-row{
+    height: 110px;
+    background-color: #eeeeee;
+    font-weight: 700;
+}
+.fc-button-cell{
+    background-color: #dddddd;
+}
+.tb-button-cell{
+    background-color: #eeeeee;
+}
+.tb-button-cell:hover{
+    background-color: #f4f4f4;
+}
+
+.table-button{
+    padding: 18px 0 9px 0;
+    width: 192px;
+    border: 1px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, .15) ;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #ffffff;
+}
+.table-button:hover{
+    font-size: 15px;
+}
+
+/* For button Colouring */
+
 .black-btn{
     background-color: #484848;
-    color: #ffffff;
 }
 
-.standart-offer{
+.standart{
     background-color: #89c331;
-    color: #ffffff;
 }
 
-.ultimate-offer{
+.ultimate{
     background-color: #f04a56;
-    color: #ffffff;
 }
 
-.premium-offer{
+.premium{
     background-color: #20807c;
-    color: #ffffff;
 }
