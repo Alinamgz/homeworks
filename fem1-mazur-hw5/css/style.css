@@ -28,6 +28,13 @@
     width: 310px;
     border-left: none;
 }
+.first-column-title{
+    font-size: 18px;
+}
+.big-txt{
+    margin-top: 10px;
+    font-size: 30px;
+}
 
 /*!* Table Header *!*/
 
