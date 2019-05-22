@@ -59,45 +59,48 @@
 
 /* Header */
 .header{
+    background: #1d2124 url("../img/header-bg.jpeg") fixed;
+    background-size: cover;
+}
+.header-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 470px;
-    background: #1d2124 url("../img/header-bg.jpeg") fixed;
-    background-size: cover;
+    height: 375px;
+    background-color: rgba(0, 0, 0, .5);
 }
 .header-title{
+    margin-bottom: 45px;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-size: 27px;
     color: #ffffff;
 }
 .pseudo-btn-wrapper{
-    width: 360px;
     display: flex;
     justify-content: space-between;
+    width: 360px;
 }
 .header-pseudo-btn{
     display: flex;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
     width: 170px;
     height: 55px;
     border-radius: 5px;
-    text-align: center;
-}
-.header-pseudo-btn-link{
-    align-self: center;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
 }
 .subscribe{
     background-color: #89ca62;
 }
 .articles{
     background-color: #14b9d5;
+}
+.header-pseudo-btn-link{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
