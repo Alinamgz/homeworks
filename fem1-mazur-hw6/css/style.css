@@ -122,11 +122,16 @@
 }
 .post-itms-wrapper{
     display: flex;
-    flex-wrap: wrap;
-    justify-content:  space-between ;
-    align-items: center;
+    justify-content: space-between ;
     width: 1170px;
     background-color: greenyellow;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    /*align-items: baseline;*/
+    /*width: 370px;*/
+    background-color: orange;
 }
 .post-itm{
     display: flex;
