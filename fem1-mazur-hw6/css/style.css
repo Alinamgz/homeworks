@@ -110,8 +110,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #f2f2f2;
+    justify-content: space-evenly;
+    height: 1032px;
+    /*background-color: #f2f2f2;*/
+    background-color: greenyellow;
 }
 .popular-posts-title{
     text-transform: uppercase;
@@ -124,14 +126,14 @@
     display: flex;
     justify-content: space-between ;
     width: 1170px;
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
 }
-.column{
+.post-itm-column-wrapper{
     display: flex;
     flex-direction: column;
     /*align-items: baseline;*/
     /*width: 370px;*/
-    background-color: orange;
+    /*background-color: orange;*/
 }
 .post-itm{
     display: flex;
