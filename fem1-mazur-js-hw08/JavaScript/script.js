@@ -4,7 +4,6 @@ const topRow = (price) => {
 
     let div = document.getElementById("topRow");
     let span = document.createElement("span");
-
     price = priceField.value;
 
     if (div.innerText === '') {
@@ -29,15 +28,15 @@ const topRow = (price) => {
 };
 
 const bottomSpan = (price) => {
-    price = Number(priceField.value);
+
     let span = document.createElement('span');
-    if (price < 0 || isNaN(price)) {
-        span.innerText = (`Please enter correct price`);
-        document.body.insertBefore(span, priceField.firstChild);
-        priceField.style.border = (`2px solid red`);
-    } else {
-        priceField.style.border = (`2px solid black`);
-    }
+    price = Number(priceField.value);
+
+    span.innerText = (`Please enter correct price`);
+    span.style.display = 'block';
+    document.body.insertBefore(span, priceField.firstChild);
+    priceField.style.border = (`2px solid red`);
+
     priceField.addEventListener("focus", () => {
         span.remove();
         priceField.style.border = (`2px solid limegreen`)
