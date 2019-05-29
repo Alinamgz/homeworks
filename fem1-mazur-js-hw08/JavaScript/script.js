@@ -1,5 +1,11 @@
 const priceField = document.getElementById('priceField');
 
+const emptyPriceField = () => {
+    priceField.value = '';
+    priceField.style.border = ('1px solid black');
+    priceField.style.color = ('black');
+};
+
 const correctPriceAnswer = (price) => {
 
     let div = document.getElementById("correctPriceAnswer");
@@ -9,14 +15,14 @@ const correctPriceAnswer = (price) => {
     if (div.innerText === '') {
 
         document.body.insertBefore(div, priceField);
-        span.innerText = `Price is ${Number(price)}`;
-        span.style.marginRight = (`10px`);
         div.appendChild(span);
+        span.innerText = `Price is $ ${Number(price)}`;
+        span.style.marginRight = (`10px`);
 
         let button = document.createElement("button");
+        div.appendChild(button);
         button.innerText = (`X`);
         button.id = ('buttonX');
-        div.appendChild(button);
     } else {
         div.innerText = '';
         correctPriceAnswer(price);
@@ -24,9 +30,7 @@ const correctPriceAnswer = (price) => {
 
     document.getElementById('buttonX').addEventListener("click", () => {
         div.innerText = '';
-        priceField.value = '';
-        priceField.style.border = ('1px solid black');
-        priceField.style.color = ('black');
+        emptyPriceField();
     });
 };
 
@@ -40,7 +44,6 @@ const wrongPriceAnswer = () => {
     priceField.style.border = (`2px solid red`);
     priceField.style.color = ('black');
 
-
     priceField.addEventListener("focus", () => {
         span.remove();
         priceField.style.border = (`2px solid limegreen`)
@@ -52,8 +55,7 @@ const priceAnswer = (price) => {
     if (price > 0) {
         correctPriceAnswer(price);
     } else if (price == '') {
-        priceField.style.border = ('1px solid black');
-        priceField.style.color = ('black');
+        emptyPriceField ();
     } else {
         wrongPriceAnswer();
     }
