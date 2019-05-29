@@ -1,15 +1,15 @@
 const priceField = document.getElementById('priceField');
 
-const topRow = (price) => {
+const correctPriceAnswer = (price) => {
 
-    let div = document.getElementById("topRow");
+    let div = document.getElementById("correctPriceAnswer");
     let span = document.createElement("span");
-    price = priceField.value;
+    priceField.style.color = ('limegreen');
 
     if (div.innerText === '') {
 
         document.body.insertBefore(div, priceField);
-        span.innerText = `Price is ${price}`;
+        span.innerText = `Price is ${Number(price)}`;
         span.style.marginRight = (`10px`);
         div.appendChild(span);
 
@@ -19,23 +19,27 @@ const topRow = (price) => {
         div.appendChild(button);
     } else {
         div.innerText = '';
-        topRow();
+        correctPriceAnswer(price);
     }
 
     document.getElementById('buttonX').addEventListener("click", () => {
         div.innerText = '';
+        priceField.value = '';
+        priceField.style.border = ('1px solid black');
+        priceField.style.color = ('black');
     });
 };
 
-const bottomSpan = (price) => {
+const wrongPriceAnswer = () => {
 
     let span = document.createElement('span');
-    price = Number(priceField.value);
 
     span.innerText = (`Please enter correct price`);
     span.style.display = 'block';
     document.body.insertBefore(span, priceField.firstChild);
     priceField.style.border = (`2px solid red`);
+    priceField.style.color = ('black');
+
 
     priceField.addEventListener("focus", () => {
         span.remove();
@@ -43,13 +47,17 @@ const bottomSpan = (price) => {
     });
 };
 
-const newSpan = (price) => {
+const priceAnswer = (price) => {
     price = Number(priceField.value);
     if (price > 0) {
-        topRow(price);
+        correctPriceAnswer(price);
+    } else if (price == '') {
+        priceField.style.border = ('1px solid black');
+        priceField.style.color = ('black');
     } else {
-        bottomSpan(price);
+        wrongPriceAnswer();
     }
 };
 
-priceField.addEventListener("blur", newSpan);
+priceField.addEventListener("focus", () => priceField.style.border = ('2px solid limegreen'));
+priceField.addEventListener("blur", priceAnswer);
