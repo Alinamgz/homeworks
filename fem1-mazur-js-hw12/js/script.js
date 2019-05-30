@@ -31,7 +31,7 @@ const imgMagic = () => {
     }
 };
 
-let magic = setInterval(imgMagic, 1000);
+let magic = setInterval(imgMagic, 10000);
 
 // const magic = setInterval(() => {
 //     imgs.forEach((img,i) => {
@@ -56,7 +56,7 @@ stopBtn.addEventListener("click", () =>{
 });
 continueBtn.addEventListener("click", () => {
     if (check === false) {
-        magic = setInterval(imgMagic, 1000);
+        magic = setInterval(imgMagic, 10000);
         check = true;
     }
 });
