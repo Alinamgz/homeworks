@@ -9,13 +9,17 @@
         .image-to-show {
             width: 400px;
             height: 400px;
-            opacity: 0;
+            visibility: hidden;
         }
 
+        .firstImage{
+            visibility: visible;
+        }
         .images-wrapper {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            height: 400px;
         }
         .stop-btn{
             background-color: coral;
@@ -32,13 +36,15 @@
     </style>
 </head>
 <body>
+
 <div class="images-wrapper">
-    <img src="./img/1.jpg" alt="image of game" class="image-to-show" />
+    <img src="./img/1.jpg" alt="image of game" class="image-to-show firstImage" />
     <img src="./img/2.jpg" alt="image of game" class="image-to-show" />
     <img src="./img/3.JPG" alt="image of game" class="image-to-show" />
     <img src="./img/4.png" alt="image of game" class="image-to-show" />
 </div>
+<!---->
+<script src="js/newScript.js"></script>
 
-<script src="js/script.js"></script>
 </body>
 </html>
