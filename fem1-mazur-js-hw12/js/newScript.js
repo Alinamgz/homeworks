@@ -9,10 +9,10 @@ const imgVisibility = () => {
 
     imgNL.forEach((img, i) => {
         if (counter === i) {
-            img.style.visibility = 'visible'
+            img.style.visibility = 'visible';
             img.style.order = '0'
         } else {
-            img.style.visibility= 'hidden'
+            img.style.visibility= 'hidden';
             img.style.order = '1'
         }
     });
@@ -24,12 +24,12 @@ const imgVisibility = () => {
     }
 };
 
-let imgVisibilityCycle = setInterval(imgVisibility,500);
+let imgVisibilityCycle = setInterval(imgVisibility,10000);
 
 // Stop-Btn
 const stopBtn = document.createElement("button");
 stopBtn.className = 'stop-btn';
-stopBtn.innerText = "STOP!"
+stopBtn.innerText = "Прекратить";
 document.body.appendChild(stopBtn);
 
 stopBtn.addEventListener("click", () => {
@@ -40,12 +40,12 @@ stopBtn.addEventListener("click", () => {
 // Continue-Btn
 const continueBtn = document.createElement("button");
 continueBtn.className = 'continue-btn';
-continueBtn.innerText = 'want more';
+continueBtn.innerText = 'Возобновить показ';
 document.body.appendChild(continueBtn);
 
 continueBtn.addEventListener("click", () => {
     if (check === false) {
-        imgVisibilityCycle = setInterval(imgVisibility , 500);
+        imgVisibilityCycle = setInterval(imgVisibility , 10000);
         check = true
-    };
+    }
 });
