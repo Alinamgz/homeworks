@@ -210,8 +210,8 @@
     display: grid;
     grid-template-areas:
     "rated-title rated-title rated-title rated-title rated-title rated-title rated-title"
-    'circles shelves-1 shelves-2 pool horses buildings stadium';
-    grid-template-columns:repeat(auto-fit, minmax(0, 1fr));
+    "circles shelves-1 shelves-2 pool horses buildings stadium";
+    grid-template-columns:repeat(7, minmax(0, 1fr));
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: row;
     justify-items: center;
@@ -219,7 +219,7 @@
 }
 
 .rated-img{
-    max-width: 14.2vw;
+    max-width: 14.15vw;
 }
 
 /*grid area names for Top Rated*/
