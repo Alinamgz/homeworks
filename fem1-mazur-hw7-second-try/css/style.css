@@ -1,0 +1,57 @@
+.credits-wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 1);
+    overflow: hidden;
+}
+
+.credits-container{
+    position: relative;
+    width: 60vw;
+    height: 100vh;
+    margin: 0 auto;
+    transform-origin: 50% 100%;
+    transform: perspective(600px) rotateX(30grad);
+    /*background-color: yellowgreen;*/
+}
+
+.credits-content{
+    position: relative;
+    top: 100vh;
+    animation: go-up 30s linear infinite;
+    /*background-color: darkblue;*/
+}
+
+.credits-txt{
+    padding-bottom: 30px;
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: rgba(255, 215, 0, 1);
+    animation: change-txt 30s linear infinite;
+}
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+@keyframes go-up {
+    from {
+        top:100vh;
+    }
+    to {
+        top: -200vh;
+    }
+}
+
+@keyframes change-txt {
+    75%{
+        color: rgba(255, 215, 0, 1);
+    }
+    to {
+        color: rgba(255, 215, 0, 0);
+    }
+}
