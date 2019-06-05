@@ -1,0 +1,160 @@
+
+/* Header */
+.header-wrapper{
+    background: #808080 url(../img/sections-background/header-bg.jpg) fixed no-repeat ;
+    background-size: cover;
+}
+
+/* Navbar */
+.navbar{
+    display: grid;
+    grid-template-areas: "logo menu";
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    background-color: rgba(120, 120, 100, .50);
+}
+
+/* Logo */
+.logo{
+    display: grid;
+    grid-template-areas: "hexagon logo-txt";
+    grid-gap: 10px;
+    align-items: center;
+    grid-area: logo;
+    font-family: Montserrat, sans-serif;
+    color: #ffffff;
+}
+.logo-hexagon {
+    grid-area: hexagon;
+    width: 58px;
+    height: 68px;
+    background-position: -77px -10px;
+    text-align: center;
+}
+.logo-letter{
+    padding: 14px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+.logo-txt{
+    grid-area: logo-txt;
+    font-size: 24px;
+}
+
+/* Menu */
+.menu{
+    grid-area: menu;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 700px;
+}
+.menu-itm{
+    list-style-type: none;
+}
+.menu-itm-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Montserrat,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+.menu-itm-color{
+    color: #b8b8b8;
+}
+.underline::after{
+    content: '';
+    display: block;
+    position: relative;
+    top: 53px;
+    width: inherit;
+    border-bottom: solid 2px #18cfab;
+}
+.menu-search-btn{
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Header txt */
+.home{
+    height: 890px;
+    display: grid;
+    grid-template-areas:
+    "ham-is ham-is"
+    "we-are we-are"
+    "just-buy just-buy"
+    "head-green-btn head-blue-btn";
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+}
+.header-txt{
+    font-family: Montserrat, sans-serif;
+    color: white;
+}
+.ham-is{
+    grid-area: ham-is;
+    text-transform: uppercase;
+    font-size:32px;
+    font-weight: 700;
+}
+.we-are{
+    grid-area: we-are;
+    text-transform: uppercase;
+    font-size: 69px;
+    font-weight: 700;
+}
+.just-buy{
+    grid-area: just-buy;
+    font-size: 30px;
+    font-weight: 300;
+    color: #d4d4d4;
+}
+/* Header buttons*/
+.general-btn{
+    height: 60px;
+    width: 165px;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    background-color: #18cfab;
+    cursor: pointer;
+}
+.header-green-btn{
+    grid-area: head-green-btn;
+}
+.header-blue-btn{
+    grid-area: head-blue-btn;
+    background-color: #00cbf6;
+}
+.parallax-btn{
+box-shadow: 0 -4px 0 white;
+}
+
+/*-----------------------------------------------*/
+.gen-txt{
+    font-family: Montserrat, sans-serif;
+    color: white;
+}
+
+.green-txt{
+    color: #18cfab;
+    font-weight: 700;
+}
+/* spritesheet */
+.sprite-bg{
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+
