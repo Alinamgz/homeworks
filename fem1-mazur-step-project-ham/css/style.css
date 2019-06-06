@@ -1,6 +1,13 @@
 
-/* Header */
+/*---------------    Header      ---------------------*/
 .header-wrapper{
+    display: grid;
+    grid-template-areas:
+            " navbar"
+            "..."
+            "home-container"
+            "...";
+    height: 1012px;
     background: #808080 url(../img/sections-background/header-bg.jpg) fixed no-repeat ;
     background-size: cover;
 }
@@ -11,6 +18,7 @@
     grid-template-areas: "logo menu";
     justify-content: space-around;
     align-items: center;
+    grid-area: navbar;
     height: 120px;
     width: 100%;
     background-color: rgba(120, 120, 100, .50);
@@ -25,6 +33,7 @@
     grid-area: logo;
     font-family: Montserrat, sans-serif;
     color: #ffffff;
+    cursor: default;
 }
 .logo-hexagon {
     grid-area: hexagon;
@@ -80,22 +89,27 @@
 }
 
 /* Header txt */
-.home{
-    height: 890px;
+
+.home-container{
     display: grid;
     grid-template-areas:
-    "ham-is ham-is"
-    "we-are we-are"
-    "just-buy just-buy"
-    "head-green-btn head-blue-btn";
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr 1fr;
+    "ham-is"
+    "we-are"
+    "just-buy"
+    "..."
+    "header-btns";
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
     justify-items: center;
-    align-content: center;
+    align-items: center;
+    grid-area: home-container;
+    height: 400px;
 }
+
 .header-txt{
     font-family: Montserrat, sans-serif;
     color: white;
+    cursor: default;
 }
 .ham-is{
     grid-area: ham-is;
@@ -115,7 +129,13 @@
     font-weight: 300;
     color: #d4d4d4;
 }
-/* Header buttons*/
+/* Buttons*/
+.header-btns{
+    grid-area: header-btns;
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+}
 .general-btn{
     height: 60px;
     width: 165px;
@@ -140,12 +160,115 @@
 box-shadow: 0 -4px 0 white;
 }
 
-/*-----------------------------------------------*/
+/*----------------------------- Options  -------------------------------*/
+.options{
+    display: flex;
+}
+.options-itm{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "..."
+            "options-icon"
+            "options-txt"
+            "...";
+    justify-items: center;
+    align-items: center;
+    height: 370px;
+    width: 480px;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.options-itm-black{
+    background-color: #000000;
+    box-shadow: 0 -4px 0 #18cfab;
+    color: #18cfab;
+}
+.options-itm-green{
+    background-color: #18cfab;
+    box-shadow: 0 -4px 0 #ffffff;
+    color: #ffffff;
+}
+.options-itm-icon{
+    grid-area: options-icon;
+    /*background: pink;*/
+}
+.options-itm-txt{
+    grid-area: options-txt;
+    cursor: default;
+}
+.bg-pointer{
+    width: 58px;
+    height: 97px;
+    background-position: -209px -105px;
+}
+.bg-diamond{
+    width: 93px;
+    height: 75px;
+    background-position: -197px -10px;
+}
+.bg-lamp{
+    width: 60px;
+    height: 96px;
+    background-position: -129px -105px;
+}
+.bg-devices{
+    width: 99px;
+    height: 76px;
+    background-position: -10px -97px;
+}
+
+/*----------------------------- Services  -------------------------------*/
+.services-tabbar{
+    display: flex;
+}
+.services-tabbar-itm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 73px;
+    width: 192px;
+    border: solid 1px #d4d4d4;
+}
+.tabs-content-itm{
+    display: flex;
+}
+.tabs-content-img{
+    height: 139px;
+    width: 194px;
+    border: solid 2px #d4d4d4;
+}
+/*---------------------- General ------------------------*/
+.container{
+    margin: 0 auto;
+    max-width: 1160px;
+    font-family: Montserrat, sans-serif;
+}
+
 .gen-txt{
     font-family: Montserrat, sans-serif;
     color: white;
 }
 
+.gen-title{
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    font-size:36px;
+    display: inline-block;
+}
+.gen-title::after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    height: 3px;
+    width: 76px;
+    border-top: solid 1px #18cfab;
+    border-bottom: solid 1px #18cfab;
+    transform: skewX(70deg);
+}
 .green-txt{
     color: #18cfab;
     font-weight: 700;
