@@ -288,6 +288,7 @@ box-shadow: 0 -4px 0 white;
     height: 73px;
     width: 192px;
     border: solid 1px #d4d4d4;
+    background-color: #f8fcfe;
 }
 
 .services-tabbar-active, .services-tabbar-itm:hover{
@@ -355,17 +356,21 @@ box-shadow: 0 -4px 0 white;
 
 /*------------------------------- Our Work ------------------------------------------------*/
 /* container*/
-.work{
+.work-wrapper{
+    background-color: #f8fcfe;
+}
+.work-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 1212px;
+    min-height: 500px;
 }
 
 /* tabbar */
 .work-tabbar{
     display: flex;
     margin-bottom: 70px;
+    background-color: #fff;
 }
 .work-tabbar-itm{
     display: flex;
@@ -386,8 +391,8 @@ box-shadow: 0 -4px 0 white;
 .work-tabs-content-parent{
     display: grid;
     grid-template-columns: repeat(4, 284px);
-    grid-template-rows: repeat(3, 205px);
-    max-height: 1230px;
+    grid-template-rows: repeat(auto-fit, 205px);
+    min-height: 205px;
     margin-bottom: 70px;
 }
 .hidden-itm{
@@ -400,6 +405,7 @@ box-shadow: 0 -4px 0 white;
     width: 284px;
     height: 205px;
     perspective: 1000px;
+    background-color: #ffffff;
 }
 .flip-wtc-itm-front, .flip-wtc-itm-back{
     position: absolute;
@@ -463,6 +469,7 @@ box-shadow: 0 -4px 0 white;
 .wt-content-itm-title{
     grid-area: wtci-title;
     margin-bottom: 13px;
+    text-transform: uppercase;
 }
 .wt-content-itm-txt{
     grid-area: wtci-txt;
@@ -471,6 +478,7 @@ box-shadow: 0 -4px 0 white;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 }
 .wtc-btn-txt::before{
     position: relative;
@@ -479,6 +487,16 @@ box-shadow: 0 -4px 0 white;
     font-size: 30px;
 
 }
+
+    /*-------------------------------  Breaking News ------------------------------------------------*/
+
+.bn-itm-wrapper{
+    position: relative;
+    width: 263px;
+    height: 280px;
+    background-color: #f8fcfe ;
+}
+
     /*------------------------------- General Strong ------------------------------------------------*/
 .green-txt{
     color: #18cfab;

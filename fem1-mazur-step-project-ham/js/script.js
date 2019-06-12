@@ -1,3 +1,4 @@
+
 // hover for header menu
 const menuHover = $('.menu-itm-color');
 menuHover.hover(function(){
@@ -19,20 +20,30 @@ activeTab.on('click', function (e) {
     $('.services-tabs-content-parent').find(`[data-content = ${sDataValue}]`).show();
 });
 
+
 // tabs for our work
 
 const activeWorkTab = $('.work-tabbar-itm');
 
 activeWorkTab.on('click', function (e) {
+
+    // decoration for active tab
     activeWorkTab.removeClass('active-work-tabbar-itm');
     $(this).addClass('active-work-tabbar-itm');
 
     const wDataValue = $(e.target).data('content');
-    $('.flip-wtc-itm').css({display:'none'});
-    $('.work-tabs-content-parent').find(`[data-content = ${wDataValue}]`).css({display:'block'});
+    //first part - for tab All, after 'else' - for other tabs
+    if (wDataValue === 'wAll'){
+        $('.flip-wtc-itm').css({display: 'none'});
+        $('.first-twelve').css({display:'block'});
+        workBtn.style.display = 'block';
+    } else {
+        $('.flip-wtc-itm').css({display: 'none'});
+        $('.work-tabs-content-parent').find(`[data-content = ${wDataValue}]`).css({display: 'block'});
+    }
 });
 
-// load 12 imgs more
+// load 12 more cards
 
 const hiddenImgs = document.querySelectorAll('.hidden-itm');
 const workBtn = document.getElementById('workBtn');
