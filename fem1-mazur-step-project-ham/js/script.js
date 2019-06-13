@@ -58,3 +58,41 @@ const showImgs = () => {
 
 workBtn.addEventListener('click', showImgs);
 
+
+// What people say carousel
+
+// arrow navigation
+const sliderBox = document.querySelector('.sliderbox');
+const slides = document.querySelectorAll('.wps-slider-itm-wrapper');
+let slidesCounter = 0;
+const amount = slides.length;
+let currentSlide = slides[0];
+const next = document.querySelector('.next');
+const prev = document.querySelector('.previous');
+
+carousel = (function(){
+    function arrowNavigate(direction){
+        currentSlide.classList.remove('wps-current');
+        slidesCounter = slidesCounter + direction;
+        if (direction === -1 &&
+            slidesCounter < 0) {
+            slidesCounter = amount - 1;
+        }
+        if (direction === 1 &&
+            !slides[slidesCounter]) {
+            slidesCounter = 0;
+        }
+        currentSlide = slides[slidesCounter];
+        currentSlide.classList.add('wps-current');
+    }
+
+    next.addEventListener('click', function() {
+        arrowNavigate(1);
+    });
+
+    prev.addEventListener('click', function() {
+        arrowNavigate(-1);
+    });
+    arrowNavigate(0);
+})();
+

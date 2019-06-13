@@ -64,7 +64,7 @@ box-shadow: 0 -4px 0 white;
             "home-container"
             "...";
     height: 1012px;
-    background: #808080 url(../img/sections-background/header-bg.jpg) fixed no-repeat ;
+    background: #4e4e4e url(../img/sections-background/header-bg.jpg) fixed no-repeat ;
     background-size: cover;
 }
 
@@ -97,7 +97,7 @@ box-shadow: 0 -4px 0 white;
     grid-area: hexagon;
     width: 58px;
     height: 68px;
-    background-position: -77px -10px;
+    background-position: -77px -35px;
     text-align: center;
 }
 .logo-letter{
@@ -240,22 +240,22 @@ box-shadow: 0 -4px 0 white;
 .bg-pointer{
     width: 58px;
     height: 97px;
-    background-position: -209px -105px;
+    background-position: -209px -130px;
 }
 .bg-diamond{
     width: 93px;
     height: 75px;
-    background-position: -197px -10px;
+    background-position: -197px -35px;
 }
 .bg-lamp{
     width: 60px;
     height: 96px;
-    background-position: -129px -105px;
+    background-position: -129px -130px;
 }
 .bg-devices{
     width: 99px;
     height: 76px;
-    background-position: -10px -97px;
+    background-position: -10px -122px;
 }
 
 /*----------------------------- Services  -------------------------------*/
@@ -316,7 +316,7 @@ box-shadow: 0 -4px 0 white;
 
 
 .purchase-wrapper{
-    background: #4e4e4e url("../img/sections-background/purchase-bg.jpg")  center  no-repeat;
+    background: #4e4e4e url("../img/sections-background/purchase-bg.jpg") fixed no-repeat;
     background-size: cover;
     height: 476px;
 }
@@ -435,7 +435,7 @@ box-shadow: 0 -4px 0 white;
     height: 40px;
     border-radius: 90px;
     border: solid 1px #18cfab;
-    background-position: 3px 4px;
+    background-position: 3px -21px;
     margin-right: 5px;
 }
 
@@ -446,7 +446,7 @@ box-shadow: 0 -4px 0 white;
     height: 40px;
     border-radius: 90px;
     background-color: #18cfab;
-    background-position: -30px 4px;
+    background-position: -30px -21px;
 }
 .wt-content-itm-title{
     grid-area: wtci-title;
@@ -537,7 +537,112 @@ box-shadow: 0 -4px 0 white;
 .bn-itm-wrapper:hover .bn-itm-date-corner{
     background-color: #18cfab;
 }
-    /*------------------------------- General Strong ------------------------------------------------*/
+
+    /*-------------------------------  What people say about the ham  = wps ------------------------------------------------*/
+.wps-wrapper{
+    background: #4e4e4e url("../img/sections-background/wps-bg.jpg") fixed no-repeat;
+    background-size: cover;
+    min-height: 850px;
+}
+.wps-title{
+    color: white;
+}
+
+/* Slider */
+
+/* which slide to show */
+.sliderbox{
+    position: relative;
+    display: flex;
+    width: 9999px;
+    overflow: hidden;
+}
+.wps-active{
+    width: 1120px;
+    height: 480px;
+}
+.wps-slider-itm-wrapper{
+    position: absolute;
+    left: 2000px;
+    width: 1120px;
+    list-style: none;
+}
+.wps-current{
+    left: 0;
+}
+
+/* how slides hould look like*/
+.wps-slider-itm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    line-height: normal;
+}
+.wps-ref-quotes{
+    width: 50px;
+    height: 40px;
+    background-position: -36px -220px;
+    margin-bottom: 43px;
+}
+.wps-reference{
+    margin-bottom: 43px;
+}
+.wps-ref-author-name{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.wps-ref-author-job{
+    margin-bottom: 30px;
+}
+.wps-ref-author-img{
+    width: 145px;
+    height: 145px;
+    border: solid 2px #18cfab;
+    border-radius: 90px;
+    box-shadow: 0 0 15px rgba(24, 207, 171, .5) ;
+}
+
+/* Slider Navigation*/
+.slider-navigation{
+    display: flex;
+    justify-content: center;
+}
+.slider-navigation-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 486px;
+}
+.nav-arrow{
+    width: 30px;
+    height: 30px;
+    padding-bottom: 2px;
+    background: none;
+    border: solid 1px #d8d8d8;
+    font-size: 16px;
+    color: #d8d8d8;
+}
+.nav-arrow:hover{
+    background-color: #18cfab;
+    color: #ffffff;
+}
+
+.slider-nav-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 90px;
+    box-shadow: 0 0 5px rgba(24, 207, 171, .5);
+}
+/*.slider-nav-img-active{*/
+/*    position: relative;*/
+/*    bottom: 10px;*/
+/*    border: solid 2px #18cfab;*/
+/*}*/
+/*------------------------------- General Strong ------------------------------------------------*/
 .green-txt{
     color: #18cfab;
     font-weight: 700;
