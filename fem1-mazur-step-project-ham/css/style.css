@@ -2,6 +2,9 @@
 /*---------------------- General weak------------------------*/
 
 .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     max-width: 1160px;
     font-family: Montserrat, sans-serif;
@@ -18,21 +21,23 @@
     font-size:36px;
     display: inline-block;
     color: #4e4e4e;
+    width: 100%;
+    text-align: center;
     margin: 100px 0;
 }
 .gen-title::after{
     content: '';
     position: absolute;
     bottom: -30px;
-    right: 30%;
-    height: 3px;
+    right: 47%;
     width: 76px;
+    height: 3px;
     border-top: solid 1px #18cfab;
     border-bottom: solid 1px #18cfab;
     transform: skewX(70deg);
 }
 
-.general-btn{
+.gen-btn{
     height: 60px;
     width: 165px;
     border: solid 1px transparent;
@@ -144,17 +149,6 @@ box-shadow: 0 -4px 0 white;
 /* Header txt */
 
 .home-container{
-    display: grid;
-    grid-template-areas:
-    "ham-is"
-    "we-are"
-    "just-buy"
-    "..."
-    "header-btns";
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
     grid-area: home-container;
     height: 400px;
 }
@@ -166,18 +160,21 @@ box-shadow: 0 -4px 0 white;
 }
 .ham-is{
     grid-area: ham-is;
+    margin-bottom: 45px;
     text-transform: uppercase;
     font-size:32px;
     font-weight: 700;
 }
 .we-are{
     grid-area: we-are;
+    margin-bottom: 40px;
     text-transform: uppercase;
     font-size: 69px;
     font-weight: 700;
 }
 .just-buy{
     grid-area: just-buy;
+    margin-bottom: 140px;
     font-size: 30px;
     font-weight: 300;
     color: #d4d4d4;
@@ -263,12 +260,6 @@ box-shadow: 0 -4px 0 white;
 
 /*----------------------------- Services  -------------------------------*/
 
-.services{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 560px;
-}
 .services-tabbs{
     display: flex;
     flex-direction: column;
@@ -339,9 +330,6 @@ box-shadow: 0 -4px 0 white;
     height: 100%;
 }
 .purchase-txt-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     height: 100px;
 }
@@ -358,12 +346,7 @@ box-shadow: 0 -4px 0 white;
 /* container*/
 .work-wrapper{
     background-color: #f8fcfe;
-}
-.work-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 500px;
+    border-bottom: solid 1px #e1e1e1;
 }
 
 /* tabbar */
@@ -413,7 +396,6 @@ box-shadow: 0 -4px 0 white;
     bottom: 0;
     width: 100%;
     height: 100%;
-    /*background-color: cornflowerblue;*/
     backface-visibility: hidden;
     transition: 1s;
 }
@@ -474,12 +456,17 @@ box-shadow: 0 -4px 0 white;
 .wt-content-itm-txt{
     grid-area: wtci-txt;
 }
+
+    /* our amazing work button */
 .wtc-btn{
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: 100px;
 }
+.wtc-btn-txt{
+    height:80%;
+}
+
 .wtc-btn-txt::before{
     position: relative;
     top: 5px;
@@ -489,14 +476,67 @@ box-shadow: 0 -4px 0 white;
 }
 
     /*-------------------------------  Breaking News ------------------------------------------------*/
+.bn-content-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 .bn-itm-wrapper{
     position: relative;
     width: 263px;
-    height: 280px;
-    background-color: #f8fcfe ;
+    margin-bottom: 40px;
+    line-height: 0;
+    background-color: #f8fcfe;
+    border: solid 1px #ececec;
+}
+.bn-itm-link{
+    text-decoration: none;
+    color: #717171;
 }
 
+.bn-itm-txt{
+    font-size: 14px;
+    padding: 15px 10px 12px 20px;
+    line-height: normal;
+    background-color: #f8fcfe;
+}
+.bn-itm-title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.bn-itm-autor::after{
+    content: '';
+    display: inline-block;
+    height: 12px;
+    margin: 0 10px;
+    border-right: solid 2px #abacad;
+}
+
+.bn-itm-date-corner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 36px;
+    padding: 15px 20px;
+    line-height: normal;
+    background-color: #203e38;
+}
+.bn-itm-date{
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.bn-itm-wrapper:hover .bn-itm-title{
+    color: #18cfab;
+}
+.bn-itm-wrapper:hover .bn-itm-date-corner{
+    background-color: #18cfab;
+}
     /*------------------------------- General Strong ------------------------------------------------*/
 .green-txt{
     color: #18cfab;
