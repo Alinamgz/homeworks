@@ -637,11 +637,11 @@ box-shadow: 0 -4px 0 white;
     border-radius: 90px;
     box-shadow: 0 0 5px rgba(24, 207, 171, .5);
 }
-/*.slider-nav-img-active{*/
-/*    position: relative;*/
-/*    bottom: 10px;*/
-/*    border: solid 2px #18cfab;*/
-/*}*/
+.slider-nav-img-active{
+    position: relative;
+    bottom: 10px;
+    border: solid 2px #18cfab;
+}
 /*------------------------------- General Strong ------------------------------------------------*/
 .green-txt{
     color: #18cfab;
