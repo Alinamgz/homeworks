@@ -2,7 +2,7 @@
 // hover for header menu
 const menuHover = $('.menu-itm-color');
 menuHover.hover(function(){
-    return $(this).toggleClass('green-txt underline');
+    $(this).toggleClass('green-txt underline');
 });
 
 //tabs for services
