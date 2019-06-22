@@ -566,11 +566,24 @@ box-shadow: 0 -4px 0 white;
     left: 2000px;
     width: 1120px;
     list-style: none;
+    opacity: 0;
 }
 .wps-current{
     left: 0;
+    animation: go-left-and-appear 0.7s linear;
+    opacity: 1;
 }
 
+@keyframes go-left-and-appear {
+    from {
+        left: 200px;
+        opacity: 0
+    }
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
 /* how slides hould look like*/
 .wps-slider-itm{
     display: flex;

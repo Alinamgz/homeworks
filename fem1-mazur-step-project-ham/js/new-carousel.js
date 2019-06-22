@@ -16,7 +16,6 @@ let currentMiniature = miniatures.eq(0);
 
 //miniatures controls
 
-
 miniatures.on('click', function(){
     miniatures.removeClass('slider-nav-img-active');
     $(this).addClass('slider-nav-img-active');
@@ -27,19 +26,6 @@ miniatures.on('click', function(){
     currentSlide = slides.eq(counter);
     currentSlide.addClass('wps-current');
 });
-
-// function findInd (ev) {
-//     let target = $(ev.target);
-//     let number = (target.index());
-//
-//     counter = number -1;
-//
-//     currentSlide = slides.eq(counter);
-//     slides.removeClass('wps-current');
-//     currentSlide.addClass('wps-current')
-// }
-//
-// miniatures.on('click', findInd);
 
 
 (function ($) {
@@ -57,18 +43,6 @@ miniatures.on('click', function(){
             if (direction === 1 && !slides[counter] && !miniatures[counter]){
                 counter = 0;
             }
-
-            // if (direction > 1){
-            //     counter = direction
-            // }
-
-            // let miniControl = function (e) {
-            //     miniatures.each(function (index) {
-            //         if (index === $(e.target)){
-            //             return counter = index
-            //         }
-            //     });
-            // };
 
             currentSlide = slides.eq(counter);
             currentSlide.addClass('wps-current');
