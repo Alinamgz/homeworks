@@ -3,9 +3,9 @@ function NewUser (firstName, lastName, birthday) {
     lastName = prompt('what is your surname', 'Smith');
     birthday = prompt('when is your day of birth? dd.mm.yyyy', '07.07.1995');
 
-    this.getFirstName = firstName;
-    this.getLastName = lastName;
-    this.getBirthday = birthday;
+    this.FirstName = firstName;
+    this.LastName = lastName;
+    this.Birthday = birthday;
     this.getLogin = userLogin();
     this.getAge = userAge();
     this.getPassword = userPassword();
