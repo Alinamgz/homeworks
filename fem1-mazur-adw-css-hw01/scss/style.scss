@@ -1,0 +1,93 @@
+// colors
+$lightGray: #cacaca;
+$gray: #373c3f;
+$darkGray:#202529;
+$green: #acd8ad;
+$blueTxt: #a6d6e0;
+$white: #ffffff;
+//fonts
+$lato:  Lato, Courier, sans-serif;
+$montserrat: Montserrat, Courier, sans-serif;
+
+
+.container{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  font-family: $lato;
+}
+
+.header{
+  position: relative;
+  height: 210px;
+  background: url("../img/header-bg.png") repeat bottom;
+  background-size: contain;
+}
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  background-color: $gray;
+
+  &__name{
+    margin: 12px 18px;
+    font-family: $montserrat;
+    color: $white;
+    font-size: 12px;
+  }
+  &__logo{
+    display: none;
+  }
+}
+
+.fas{
+  font-size: 16px;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 180px;
+  background-color: #fafafa;
+  &--active{
+    display: block;
+  }
+  &__item{
+    list-style: none;
+    padding: 8px 12px;
+    border: 1px solid #f3f3f3;
+  }
+  &__link{
+    text-decoration: none;
+    //font-family: $lato;
+    font-size: 12px;
+    color: $gray;
+  }
+  &__btn{
+    width: 44px;
+    border: none;
+    background-color: $darkGray;
+    color: $white;
+  }
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  height: 60px;
+  //font-family: $lato;
+  font-weight: 700;
+  &__txt{
+    font-size: 16px;
+    color: $white;
+  }
+  &__link{
+    text-decoration: none;
+    font-size: 14px;
+    color: $blueTxt;
+  }
+}
