@@ -9,6 +9,10 @@ $white: #ffffff;
 $lato:  Lato, Courier, sans-serif;
 $montserrat: Montserrat, Courier, sans-serif;
 
+@mixin centrifyTxt{
+  padding-top: 25px;
+  text-align: center;
+}
 
 .container{
   -webkit-box-sizing: border-box;
@@ -19,17 +23,19 @@ $montserrat: Montserrat, Courier, sans-serif;
   font-family: $lato;
 }
 
+// ---------- Header ----------
 .header{
   position: relative;
+  margin-bottom: 4px;
   height: 210px;
-  background: url("../img/header-bg.png") repeat bottom;
+  background: $gray url("../img/header-bg.png") repeat bottom;
   background-size: contain;
 }
+
 .navigation{
   display: flex;
   justify-content: space-between;
   background-color: $gray;
-
   &__name{
     margin: 12px 18px;
     font-family: $montserrat;
@@ -89,5 +95,43 @@ $montserrat: Montserrat, Courier, sans-serif;
     text-decoration: none;
     font-size: 14px;
     color: $blueTxt;
+  }
+}
+
+.product{
+  display: flex;
+  height: 75px;
+  color: $white;
+  font-size: 20px;
+  font-weight: 700;
+
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 228px;
+  }
+  &__name{
+    box-sizing: border-box;
+    width: 249px;
+    @include centrifyTxt;
+
+    &--pizza{
+      background: $gray url("../img/320/pizza-delivery.png") no-repeat 75% 95%;
+    }
+    &--salad{
+      background: $gray url("../img/320/salads.png") no-repeat left 93%;
+    }
+    &--dessert{
+      background: $gray url("../img/320/desserts.png") no-repeat center 15%;
+    }
+  }
+  &__link{
+    text-decoration: none;
+    color: $white;
+    width: 71px;
+    @include centrifyTxt;
+    background: $green;
+
   }
 }

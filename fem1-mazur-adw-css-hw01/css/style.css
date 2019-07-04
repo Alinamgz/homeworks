@@ -8,8 +8,9 @@
 
 .header {
   position: relative;
+  margin-bottom: 4px;
   height: 210px;
-  background: url("../img/header-bg.png") repeat bottom;
+  background: #373c3f url("../img/header-bg.png") repeat bottom;
   background-size: contain; }
 
 .navigation {
@@ -63,3 +64,33 @@
     text-decoration: none;
     font-size: 14px;
     color: #a6d6e0; }
+
+.product {
+  display: flex;
+  height: 75px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700; }
+  .product-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 228px; }
+  .product__name {
+    box-sizing: border-box;
+    width: 249px;
+    padding-top: 25px;
+    text-align: center; }
+    .product__name--pizza {
+      background: #373c3f url("../img/320/pizza-delivery.png") no-repeat 75% 95%; }
+    .product__name--salad {
+      background: #373c3f url("../img/320/salads.png") no-repeat left 93%; }
+    .product__name--dessert {
+      background: #373c3f url("../img/320/desserts.png") no-repeat center 15%; }
+  .product__link {
+    text-decoration: none;
+    color: #ffffff;
+    width: 71px;
+    padding-top: 25px;
+    text-align: center;
+    background: #acd8ad; }
