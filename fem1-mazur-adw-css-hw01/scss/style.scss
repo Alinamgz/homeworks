@@ -51,7 +51,7 @@ $montserrat: Montserrat, Courier, sans-serif;
   font-size: 16px;
 }
 
-.menu {
+.nav-menu {
   display: none;
   position: absolute;
   right: 0;
@@ -98,6 +98,7 @@ $montserrat: Montserrat, Courier, sans-serif;
   }
 }
 
+// Product gallery
 .product{
   display: flex;
   height: 75px;
@@ -107,6 +108,7 @@ $montserrat: Montserrat, Courier, sans-serif;
 
   &-wrapper{
     display: flex;
+    margin-bottom: 21px;
     flex-direction: column;
     justify-content: space-between;
     height: 228px;
@@ -132,6 +134,72 @@ $montserrat: Montserrat, Courier, sans-serif;
     width: 71px;
     @include centrifyTxt;
     background: $green;
+  }
+}
 
+//spk = Speisekarte (german for restaurant menu)
+
+.spk{
+  &__title{
+    box-sizing: border-box;
+    margin-bottom: 7px;
+    height: 37px;
+    text-transform: uppercase;
+    font-family: $lato;
+    font-size: 20px;
+    &--black{
+      position: relative;
+      padding-left: 7px;
+      color: $gray;
+    }
+    &--black::after{
+      content: 'Ultrices cursus sit amet placerat tortor';
+      position: absolute;
+      bottom: 5px;
+      left: 9px;
+      text-transform: none;
+      color: $lightGray;
+      font-size: 10px;
+    }
+    &--green{
+      color: $green;
+      background: $gray;
+      padding: 8px 17px;
+    }
+    &--white{
+      color: $white;
+      background: $green;
+      padding: 8px 17px;
+    }
+  }
+  &__list{
+    padding: 10px 18px;
+
+    &--subtitle{
+    text-transform: uppercase;
+    font-size: 15px;
+    color: $gray;
+    }
+  }
+  &__itm{
+    display: grid;
+    grid-template-areas: 'name price'
+                          'description description';
+    &--name{
+      grid-area: name;
+      font-size: 12px;
+    }
+    &--price{
+    grid-area: price;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    &--price::before{
+      content: '$';
+    }
+    &--description{
+      grid-area: description;
+      font-size: 8px;
+    }
   }
 }

@@ -28,23 +28,23 @@
 .fas {
   font-size: 16px; }
 
-.menu {
+.nav-menu {
   display: none;
   position: absolute;
   right: 0;
   width: 180px;
   background-color: #fafafa; }
-  .menu--active {
+  .nav-menu--active {
     display: block; }
-  .menu__item {
+  .nav-menu__item {
     list-style: none;
     padding: 8px 12px;
     border: 1px solid #f3f3f3; }
-  .menu__link {
+  .nav-menu__link {
     text-decoration: none;
     font-size: 12px;
     color: #373c3f; }
-  .menu__btn {
+  .nav-menu__btn {
     width: 44px;
     border: none;
     background-color: #202529;
@@ -73,6 +73,7 @@
   font-weight: 700; }
   .product-wrapper {
     display: flex;
+    margin-bottom: 21px;
     flex-direction: column;
     justify-content: space-between;
     height: 228px; }
@@ -94,3 +95,54 @@
     padding-top: 25px;
     text-align: center;
     background: #acd8ad; }
+
+.spk__title {
+  box-sizing: border-box;
+  margin-bottom: 7px;
+  height: 37px;
+  text-transform: uppercase;
+  font-family: Lato, Courier, sans-serif;
+  font-size: 20px; }
+  .spk__title--black {
+    position: relative;
+    padding-left: 7px;
+    color: #373c3f; }
+  .spk__title--black::after {
+    content: 'Ultrices cursus sit amet placerat tortor';
+    position: absolute;
+    bottom: 5px;
+    left: 9px;
+    text-transform: none;
+    color: #cacaca;
+    font-size: 10px; }
+  .spk__title--green {
+    color: #acd8ad;
+    background: #373c3f;
+    padding: 8px 17px; }
+  .spk__title--white {
+    color: #ffffff;
+    background: #acd8ad;
+    padding: 8px 17px; }
+
+.spk__list {
+  padding: 10px 18px; }
+  .spk__list--subtitle {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #373c3f; }
+
+.spk__itm {
+  display: grid;
+  grid-template-areas: 'name price' 'description description'; }
+  .spk__itm--name {
+    grid-area: name;
+    font-size: 12px; }
+  .spk__itm--price {
+    grid-area: price;
+    font-size: 13px;
+    font-weight: 700; }
+  .spk__itm--price::before {
+    content: '$'; }
+  .spk__itm--description {
+    grid-area: description;
+    font-size: 8px; }
