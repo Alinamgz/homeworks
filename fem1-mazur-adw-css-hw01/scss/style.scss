@@ -152,16 +152,17 @@ $montserrat: Montserrat, Courier, sans-serif;
       position: relative;
       padding-left: 7px;
       color: $gray;
-    }
-      &--black::after {
-      content: 'Ultrices cursus sit amet placerat tortor';
-      position: absolute;
-      bottom: 5px;
-      left: 9px;
-      text-transform: none;
-      color: $lightGray;
-      font-size: 10px;
+
+      &::after {
+        content: 'Ultrices cursus sit amet placerat tortor';
+        position: absolute;
+        bottom: 5px;
+        left: 9px;
+        text-transform: none;
+        color: $lightGray;
+        font-size: 10px;
       }
+    }
 
     &--green {
       color: $green;
@@ -193,33 +194,34 @@ $montserrat: Montserrat, Courier, sans-serif;
   }
   &__icon{
     height: 23px;
-    //width: 25px;
   }
 
   &__itm {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    //grid-template-areas: 'name price' 'description description';
 
     &--name {
-      display: list-item;
-      grid-area: name;
-      font-size: 12px;
+      font-size: 14px;
+
+      &::before{
+        content: "\2022";
+        font-size: 8px;
+      }
     }
 
     &--price {
-      grid-area: price;
       font-size: 13px;
       font-weight: 700;
-    }
-      &--price::before {
+
+      &::before{
         content: '$';
       }
+    }
 
     &--description {
-      grid-area: description;
-      font-size: 8px;
+      font-size: 9px;
+      margin: 10px 0;
     }
   }
 }

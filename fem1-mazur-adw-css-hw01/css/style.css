@@ -107,14 +107,14 @@
     position: relative;
     padding-left: 7px;
     color: #373c3f; }
-  .spk__title--black::after {
-    content: 'Ultrices cursus sit amet placerat tortor';
-    position: absolute;
-    bottom: 5px;
-    left: 9px;
-    text-transform: none;
-    color: #cacaca;
-    font-size: 10px; }
+    .spk__title--black::after {
+      content: 'Ultrices cursus sit amet placerat tortor';
+      position: absolute;
+      bottom: 5px;
+      left: 9px;
+      text-transform: none;
+      color: #cacaca;
+      font-size: 10px; }
   .spk__title--green {
     color: #acd8ad;
     background: #373c3f;
@@ -142,18 +142,18 @@
     flex-wrap: wrap;
     justify-content: space-between; }
     .spk-list__itm--name {
-      display: list-item;
-      grid-area: name;
-      font-size: 12px; }
+      font-size: 14px; }
+      .spk-list__itm--name::before {
+        content: "\2022";
+        font-size: 8px; }
     .spk-list__itm--price {
-      grid-area: price;
       font-size: 13px;
       font-weight: 700; }
-    .spk-list__itm--price::before {
-      content: '$'; }
+      .spk-list__itm--price::before {
+        content: '$'; }
     .spk-list__itm--description {
-      grid-area: description;
-      font-size: 8px; }
+      font-size: 9px;
+      margin: 10px 0; }
 
 .test-li {
   display: list-item; }
