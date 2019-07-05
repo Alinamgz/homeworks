@@ -24,6 +24,10 @@ $montserrat: Montserrat, Courier, sans-serif;
 }
 
 // ---------- Header ----------
+
+.pizzeria-logo{
+  display: none;
+}
 .header{
   position: relative;
   margin-bottom: 4px;
@@ -41,9 +45,6 @@ $montserrat: Montserrat, Courier, sans-serif;
     font-family: $montserrat;
     color: $white;
     font-size: 12px;
-  }
-  &__logo{
-    display: none;
   }
 }
 
@@ -226,7 +227,23 @@ $montserrat: Montserrat, Courier, sans-serif;
   }
 }
 
-.test-li{
-  display: list-item;
-  //flex-direction: column;
+// Footer
+
+.footer{
+  margin-top: 20px;
+  box-sizing: border-box;
+  height: 55px;
+  padding: 10px 40px;
+  background: $green;
+  &__txt-box{
+    display: flex;
+    height: 32px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__txt{
+    font-size: 13px;
+    color: $white;
+  }
 }

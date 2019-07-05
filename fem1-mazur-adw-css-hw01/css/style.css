@@ -6,6 +6,9 @@
   margin: 0 auto;
   font-family: Lato, Courier, sans-serif; }
 
+.pizzeria-logo {
+  display: none; }
+
 .header {
   position: relative;
   margin-bottom: 4px;
@@ -22,8 +25,6 @@
     font-family: Montserrat, Courier, sans-serif;
     color: #ffffff;
     font-size: 12px; }
-  .navigation__logo {
-    display: none; }
 
 .fas {
   font-size: 16px; }
@@ -155,5 +156,18 @@
       font-size: 9px;
       margin: 10px 0; }
 
-.test-li {
-  display: list-item; }
+.footer {
+  margin-top: 20px;
+  box-sizing: border-box;
+  height: 55px;
+  padding: 10px 40px;
+  background: #acd8ad; }
+  .footer__txt-box {
+    display: flex;
+    height: 32px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__txt {
+    font-size: 13px;
+    color: #ffffff; }
