@@ -1,10 +1,23 @@
 
 function Hamburger (size, stuffing){
-    this.size = size;
-    this.stuffing = stuffing;
-    this.toppings = [];
+
+        const hamburgerSizes = [Hamburger.SIZE_SMALL, Hamburger.SIZE_LARGE];
+        const hamburgerStuffings = [Hamburger.STUFFING_CHEESE, Hamburger.STUFFING_POTATO, Hamburger.STUFFING_SALAD];
+
+        try {
+            if (hamburgerSizes.includes(size) && hamburgerStuffings.includes(stuffing)) {
+                this.size = size;
+                this.stuffing = stuffing;
+                this.toppings = [];
+            } else {
+                throw new HamburgerException('Hamburger Exception', 'Please, choose size first. Then choose stuffing')
+            }
+        }catch (e) {
+            console.log(`${e.name}: ${e.message}`);
+        }
 }
 
+//---------- consts for sizes, stuffings, toppins:
 Hamburger.SIZE_SMALL = {
     name: 'Small',
     price: 50,
@@ -43,9 +56,9 @@ Hamburger.TOPPING_SPICE = {
 
 // ---------------  Hamburger methods  -------------------
 
-Hamburger.prototype.addTopping = function (topping) {
+//---------- Add topping
+Hamburger.prototype.addTopping = function (whatToAdd) {
 
-    let whatToAdd = topping;
     let ourToppings = this.toppings;
 
     try {
@@ -54,28 +67,28 @@ Hamburger.prototype.addTopping = function (topping) {
             try {
                 if (ourToppings.length === 0 || (ourToppings.length === 1 && ourToppings[0].name !== whatToAdd.name)) {
                     ourToppings.push(whatToAdd);
-                } else throw new ToppingAmountError
+                } else throw new HamburgerException('Topping amount error', 'You can have only 1 of each topping')
             } catch (amountErr) {
                 alert(amountErr.name);
                 console.log(`${amountErr.name}: ${amountErr.message}`);
             }
 
-        } else throw new ToppingTypeError
+        } else throw new HamburgerException ('Topping Type Error', "It's not a topping. Please, choose one of this: TOPPING_MAYO or TOPPING_SPICE")
     } catch (typeErr) {
-        alert('typeErr.name');
+        // alert('typeErr.name');
         console.log(`${typeErr.name}: ${typeErr.message}`);
     }
 };
 
-Hamburger.prototype.removeTopping = function(topping){
+//---------- Remove topping
+Hamburger.prototype.removeTopping = function(whatToRemove){
 
-    let whatToRemove = topping;
     let ourToppings = this.toppings;
     let removalTarget = NaN;
 
     try {
-        if (topping === Hamburger.TOPPING_MAYO || topping === Hamburger.TOPPING_SPICE) {
-            for (let i=0; i < ourToppings.length; i++) {
+        if (whatToRemove === Hamburger.TOPPING_MAYO || whatToRemove === Hamburger.TOPPING_SPICE) {
+            for (let i = 0; i < ourToppings.length; i++) {
                 if (ourToppings[i].name === whatToRemove.name) {
                     removalTarget = ourToppings.indexOf(ourToppings[i]);
                 }
@@ -83,73 +96,98 @@ Hamburger.prototype.removeTopping = function(topping){
 
             try {
                 if (!isNaN(removalTarget)) {
-                    ourToppings.splice(removalTarget,1);
+                    ourToppings.splice(removalTarget, 1);
                 } else {
-                    throw new ToppingRemoveError;
+                    throw new HamburgerException('Topping removal error', 'There is no such topping in this burger' );
                 }
             } catch (removeErr) {
                 console.log(`${removeErr.name}: ${removeErr.message}`);
             }
 
-        } else throw new ToppingTypeError
+        } else throw new HamburgerException ('Topping Type Error', "It's not a topping. Please, choose one of this: TOPPING_MAYO or TOPPING_SPICE")
     } catch (typeErr) {
         alert('typeErr.name');
         console.log(`${typeErr.name}: ${typeErr.message}`);
     }
+};
 
-    //
-    //     try{
-    //          if (ourToppings.includes(whatToRemove) && ourToppings[i].name === whatToRemove.name){
-    //          console.log("got ya");
-    //              console.log('==================================');
-    //          } else {
-    //              throw new ToppingRemoveError;
-    //          }
-    //      } catch (removeErr) {
-    //          console.log(`${removeErr.name}: ${removeErr.message}
-    //          ----------------------------------------------------`);
-    //      }
-    // }
-    // try {
-    //     if (topping === Hamburger.TOPPING_MAYO || topping === Hamburger.TOPPING_SPICE) {
-    //         alert ('fine');
-    //         console.log('fine');
-    //     } else throw new ToppingTypeError
-    // } catch (typeErr) {
-    //     alert('typeErr.name');
-    //     console.log(`${typeErr.name}: ${typeErr.message}`);
-    // }
+//---------- Calories
+Hamburger.prototype.calculateCalories = function () {
+    let sizeCalories = this.size.calories;
+    let stuffingCalories = this.stuffing.calories;
+    let toppingsCalories = 0;
+    if (this.toppings.length > 0) {
+        toppingsCalories = this.toppings.reduce(function (sum, current) {
+            return sum + current.calories
+        }, 0);
+    }
+    let hambCalories = sizeCalories + stuffingCalories + toppingsCalories;
+    return (`You eat ${hambCalories} kkal`);
+};
+
+//---------- Price
+Hamburger.prototype.calculatePrice = function () {
+    let sizePrice = this.size.price;
+    let stuffingPrice = this.stuffing.price;
+    let toppingsPrice = 0;
+    if (this.toppings.length > 0) {
+        toppingsPrice = this.toppings.reduce(function (sum, current) {
+            return sum + current.price
+        }, 0);
+    }
+    let hambPrice = sizePrice + stuffingPrice + toppingsPrice;
+    return (`The price is ${hambPrice} uah`);
+};
+
+//---------- Size
+Hamburger.prototype.getSize = function (size) {
+    const hamburgerSizes = [Hamburger.SIZE_SMALL, Hamburger.SIZE_LARGE];
+
+    try {
+        if (hamburgerSizes.includes(size)){
+            return (console.log(this.size === size))
+        } else {
+            throw new HamburgerException('Size Type Error', "It's not a size. Please, choose one of this: SIZE_SMALL or SIZE_LARGE" )
+        }
+    } catch(e) {
+        console.log( `${e.name}: ${e.message}` )
+    }
 };
 
 
-// ---------------  My Errors   -------------------
-function ToppingAmountError () {
-    this.name = 'Topping amount error';
-    this.message = 'You can have only 1 of each topping';
+//---------- Stuffing
+Hamburger.prototype.getStuffing = function (stuffing) {
+    const hamburgerStuffings = [Hamburger.STUFFING_CHEESE, Hamburger.STUFFING_POTATO, Hamburger.STUFFING_SALAD];
+
+    try {
+        if (hamburgerStuffings.includes(stuffing)){
+            return (console.log(this.stuffing === stuffing))
+        } else {
+            throw new HamburgerException('Stuffing Type Error', `It's not a stuffing. Please, choose one of this: STUFFING_CHEESE, STUFFING_POTATO, STUFFING_SALAD` )
+        }
+    } catch(e) {
+        console.log( `${e.name}: ${e.message}` )
+    }
+};
+
+//---------- Topping
+Hamburger.prototype.getTopping = function (topping) {
+    const hamburgerToppings = [Hamburger.TOPPING_MAYO, Hamburger.TOPPING_SPICE];
+
+    try {
+        if (hamburgerToppings.includes(topping)){
+            return (console.log(this.toppings.includes(topping)))
+        } else {
+            throw new HamburgerException ('Topping Type Error', "It's not a topping. Please, choose one of this: TOPPING_MAYO or TOPPING_SPICE")
+        }
+    } catch(e) {
+        console.log( `${e.name}: ${e.message}` )
+    }
+};
+
+// ---------------  Hamburger Exception   -------------------
+
+function HamburgerException (name, message) {
+    this.name = name;
+    this.message = message;
 }
-
-function ToppingTypeError() {
-    this.name = 'Topping Type Error';
-    this.message = "It's not a topping. Please, choose one of this: TOPPING_MAYO or TOPPING_SPICE"
-}
-
-function ToppingRemoveError() {
-    this.name = 'Topping removal error';
-    this.message = 'There is no such topping in this burger'
-}
-
-// ---------------  My Hamburgers   -------------------
-
-let testHamb = new Hamburger(Hamburger.SIZE_LARGE, Hamburger.STUFFING_POTATO);
-testHamb.addTopping(Hamburger.TOPPING_SPICE);
-testHamb.addTopping(Hamburger.TOPPING_MAYO);
-testHamb.addTopping(Hamburger.TOPPING_MAYO);
-
-testHamb.removeTopping(Hamburger.TOPPING_MAYO);
-testHamb.removeTopping(Hamburger.SIZE_LARGE);
-
-testHamb.removeTopping(Hamburger.TOPPING_SPICE);
-
-console.log(testHamb);
-
-// console.log(testHamb.toppings[1].name);
